@@ -1,4 +1,4 @@
-package com.unpam.model.rentcar.model;
+package com.unpam.model;
 
 public class Mobil {
 

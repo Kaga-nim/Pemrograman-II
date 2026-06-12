@@ -6,34 +6,23 @@ package com.unpam.model.rentcar.config;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
 
 public class Koneksi {
-    private static Connection conn;
+    private static final String URL = "jdbc:mysql://localhost:3306/rentcar";
+    private static final String USER = "root";
+    private static final String PASS = ""; // Isi jika database Anda menggunakan password
 
-    public static Connection getConnection() {
-
+    public static Connection getKoneksi() throws SQLException {
         try {
-
-            if (conn == null) {
-
-                Class.forName("com.mysql.cj.jdbc.Driver");
-
-                conn = DriverManager.getConnection(
-                        "jdbc:mysql://localhost:3306/rentcar",
-                        "root",
-                        ""
-                );
-
-                System.out.println("Koneksi berhasil");
-            }
-
-        } catch (Exception e) {
-
-            System.out.println("Koneksi gagal");
-            System.out.println(e.getMessage());
-
+            Class.forName("com.mysql.cj.jdbc.Driver");
+        } catch (ClassNotFoundException e) {
+            System.err.println("Driver tidak ditemukan: " + e.getMessage());
         }
-
-        return conn;
+        return DriverManager.getConnection(URL, USER, PASS);
+    }
+    
+    public static Connection getConnection() throws SQLException {
+        return getKoneksi();
     }
 }

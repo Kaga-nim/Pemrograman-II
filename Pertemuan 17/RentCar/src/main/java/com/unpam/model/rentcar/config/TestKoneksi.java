@@ -4,10 +4,21 @@
  */
 package com.unpam.model.rentcar.config;
 
+import java.sql.Connection;
+import java.sql.SQLException;
+
 public class TestKoneksi {
     public static void main(String[] args) {
 
-        Koneksi.getConnection();
-
+        try {
+            Connection conn = Koneksi.getKoneksi();
+            if (conn != null) {
+                System.out.println("Koneksi ke Database Rent Car BERHASIL!");
+                conn.close();
+            }
+        } catch (SQLException e) {
+            System.out.println("Koneksi ke Database GAGAL!");
+            e.printStackTrace();
+        }
     }
 }
