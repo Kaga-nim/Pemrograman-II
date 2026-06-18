@@ -15,8 +15,8 @@ Repository ini berisi kumpulan tugas mata kuliah Pemrograman II yang dikembangka
 - **Pertemuan 05** - DatabaseMahasiswa: Integrasi database untuk manajemen data mahasiswa
 - **Pertemuan 06** - PenjualanRumahApp & SISKA: Aplikasi penjualan rumah dan Sistem Informasi Nilai Mahasiswa berbasis Java & MySQL
 - **Pertemuan 07** - ProjectLaporan: Aplikasi pembuatan laporan
-- **Pertemuan 08** - (Kosong)
-- **Pertemuan 09** - (Kosong)
+- **Pertemuan 08** - 
+- **Pertemuan 09** - 
 - **Pertemuan 10** - FormLoginStatic: Form login statis
 - **Pertemuan 11** - MenghitungHarga: Aplikasi perhitungan harga
 - **Pertemuan 12** - Pertemuan12Web: Project web dasar
