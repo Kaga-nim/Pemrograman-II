@@ -4,10 +4,6 @@
  */
 package com.unpam.controller;
 
-/**
- *
- * @author Della
- */
 public class LogoutController {
     
 }
